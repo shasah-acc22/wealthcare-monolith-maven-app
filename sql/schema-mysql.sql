@@ -9,7 +9,7 @@
         role varchar(40),
         PRIMARY KEY (id)
     );
-    ALTER TABLE wcusers AUTO_INCREMENT = 10001;
+    ALTER TABLE Wcusers AUTO_INCREMENT = 10001;
 
     drop table IF EXISTS WcBusinessManager;
     create table WcBusinessManager (
@@ -20,7 +20,7 @@
         StartDate date,
         PRIMARY KEY (id)
     );
-    ALTER TABLE wcbusinessmanager AUTO_INCREMENT = 20001;
+    ALTER TABLE WcBusinessManager AUTO_INCREMENT = 20001;
 
     drop table IF EXISTS WcWealthManager;
     create table WcWealthManager (
@@ -37,7 +37,7 @@
         ZipCode varchar (20),
         PRIMARY KEY (id)
     );
-    ALTER TABLE wcwealthmanager AUTO_INCREMENT = 30001;
+    ALTER TABLE WcWealthManager AUTO_INCREMENT = 30001;
 
     drop table IF EXISTS WcCustomer;
     create table WcCustomer (
@@ -79,7 +79,7 @@
         ZipCode varchar (20),
         PRIMARY KEY (id)
     );
-    ALTER TABLE wccustomer AUTO_INCREMENT = 40001;
+    ALTER TABLE WcCustomer AUTO_INCREMENT = 40001;
 
     drop table IF EXISTS WcGoal;
     create table WcGoal (
@@ -95,7 +95,7 @@
        TargetAmount double,
         PRIMARY KEY (id)
     );
-    ALTER TABLE wcgoal AUTO_INCREMENT = 50001;
+    ALTER TABLE WcGoal AUTO_INCREMENT = 50001;
 
     drop table IF EXISTS WcInvestment;
     create table WcInvestment(
@@ -108,4 +108,4 @@
        FixedDepositAmount double,
         PRIMARY KEY (id)
     );
-    ALTER TABLE wcinvestment AUTO_INCREMENT = 60001;
+    ALTER TABLE WcInvestment AUTO_INCREMENT = 60001;
