@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: container-user
-          image: "/wealthcare-ns/wealthcare-user-ocp-oss:0.0.1"
+          image: "default-route-openshift-image-registry.apps.cluster-k6xmm.k6xmm.sandbox2868.opentlc.com/wealthcare-ns/wealthcare-user-ocp-oss:0.0.1"
           imagePullPolicy: Always
           ports:
             - name: my-http
