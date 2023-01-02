@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <archive targetInArchive="/wcareEJB.jar">
+        <dir sourceOnDisk="/tmp/wealthcare-monolith-app/wcareEJB/build/classes" targetInArchive="/"/>
+    </archive>
+    <archive targetInArchive="/wcareWeb.war">
+	<dir sourceOnDisk="/tmp/wealthcare-monolith-app/wcareWeb/WebContent" targetInArchive="/"/>
+    </archive>
+    <dir sourceOnDisk="/tmp/wealthcare-monolith-app/wcare" targetInArchive="/"/>
+</archive>

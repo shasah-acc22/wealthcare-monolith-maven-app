@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wealthcare-monolith-app
+  namespace: wealthcare-ns
+  labels:
+    app: wealthcare-app
+    subname: monolith
+spec:
+  selector:
+    matchLabels:
+      app: wealthcare-app
+      subname: monolith
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wealthcare-app
+        subname: monolith    
+    spec:
+      containers:
+        - name: container-monolith
+          image: "image-registry.openshift-image-registry.svc:5000/wealthcare-ns/wealthcare-monolith-ocp-oss:0.0.1"
+          imagePullPolicy: Always
+          ports:
+            - name: 9080-tcp
+              containerPort: 9080
+              protocol: TCP
+            - name: https
+              containerPort: 9443
+          resources:
+            requests:
+              memory: "500Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"                  
+          envFrom:
+            - configMapRef:
+                name: wealthcare-config-map
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wealthcare-monolith-app
+  namespace: wealthcare-ns
+  labels:
+    app: wealthcare-app
+    subname: monolith
+spec:
+  type: LoadBalancer
+  ports:
+    - name: 9080-tcp
+      port: 9080
+      targetPort: 9080
+  selector:
+    app: wealthcare-app
+    subname: monolith
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: wealthcare-monolith-app
+  namespace: wealthcare-ns
+  labels:
+    app: wealthcare-app
+    subname: monolith
+spec:
+  path: /
+  to:
+    kind: Service
+    name: wealthcare-monolith-app
+    weight: 100
+  port:
+    targetPort: 9080-tcp

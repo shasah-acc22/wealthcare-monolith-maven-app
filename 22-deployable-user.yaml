@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wealthcare-user
+  namespace: wealthcare-ns
+  labels:
+    app: wealthcare-application
+    subname: user
+spec:
+  selector:
+    matchLabels:
+      app: wealthcare-application
+      subname: user
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wealthcare-application
+        subname: user          
+    spec:
+      containers:
+        - name: container-user
+          image: "gandhicloudlab/wealthcare-user-ocp-oss:0.0.1"
+          imagePullPolicy: Always
+          ports:
+            - name: my-http
+              containerPort: 9091
+              protocol: TCP
+            - name: https
+              containerPort: 8082
+          resources:
+            requests:
+              memory: "500Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"                  
+          envFrom:
+            - configMapRef:
+                name: wealthcare-config-map
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wealthcare-user
+  namespace: wealthcare-ns
+  labels:
+    app: wealthcare-application
+    subname: user
+spec:
+  type: LoadBalancer
+  ports:
+    - name: my-http
+      port: 9090
+      targetPort: 9091
+  selector:
+    app: wealthcare-application
+    subname: user
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: wealthcare-user
+  namespace: wealthcare-ns
+  labels:
+    app: wealthcare-application
+    subname: user
+spec:
+  path: /
+  to:
+    kind: Service
+    name: wealthcare-user
+    weight: 100
+  port:
+    targetPort: my-http
