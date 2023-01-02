@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: container-monolith
-          image: "image-registry.openshift-image-registry.svc:5000/wealthcare-ns/wealthcare-monolith-ocp-oss:0.0.1"
+          image: "/wealthcare-ns/wealthcare-monolith-ocp-oss:0.0.1"
           imagePullPolicy: Always
           ports:
             - name: 9080-tcp
