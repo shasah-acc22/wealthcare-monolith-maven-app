@@ -11,8 +11,8 @@ data:
   ##### User and FinancialPlan services
   #apiUrlUser: http://wealthcare-user-wealthcare-ns.gsidevint-4c84f1rs.appdomain.cloud/
   #apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-ns.gsidevint-4c84f1rs.appdomain.cloud/
-  apiUrlFinancialplan: http://wealthcare-user-wealthcare-ns.apps.cluster-k6xmm.k6xmm.sandbox2868.opentlc.com/financialplan/
-  apiUrlUser: http://wealthcare-user-wealthcare-ns.apps.cluster-k6xmm.k6xmm.sandbox2868.opentlc.com/user/
+  apiUrlFinancialplan: http://wealthcare-user-wealthcare-ns.apps.cluster-rf9fc.rf9fc.sandbox2675.opentlc.com/financialplan/
+  apiUrlUser: http://wealthcare-user-wealthcare-ns.apps.cluster-rf9fc.rf9fc.sandbox2675.opentlc.com/user/
   
   ##### MQ
   configMapMqConnName: 111.222.333.444(1414)
@@ -31,7 +31,7 @@ data:
   #databasePlatform: org.hibernate.dialect.H2Dialect
   
   ##### DB-MySQL
-  databaseUrl: jdbc:mysql://mysql-wealthcare-ns.apps.cluster-k6xmm.k6xmm.sandbox2868.opentlc.com/BLUDB
+  databaseUrl: jdbc:mysql://mysql-wealthcare-ns.apps.cluster-rf9fc.rf9fc.sandbox2675.opentlc.com/BLUDB
   databaseUsername: root
   databasePassword: root
   databaseDriverClass: com.mysql.jdbc.Driver
