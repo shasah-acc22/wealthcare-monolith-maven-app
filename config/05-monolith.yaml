@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wealthcare-monolith-app
-  namespace: wealthcare-ns
+  namespace: wealthcare-monolith-ns
   labels:
     app: wealthcare-app
     subname: monolith
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: container-monolith
-          image: "default-route-openshift-image-registry.apps.cluster-rf9fc.rf9fc.sandbox2675.opentlc.com/wealthcare-ns/wealthcare-monolith-ocp-oss:0.0.1"
+          image: "default-route-openshift-image-registry.apps.cluster-rf9fc.rf9fc.sandbox2675.opentlc.com/wealthcare-monolith-ns/wealthcare-monolith-ocp-oss:0.0.1"
           imagePullPolicy: Always
           ports:
             - name: 9080-tcp
@@ -43,7 +43,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: wealthcare-monolith-app
-  namespace: wealthcare-ns
+  namespace: wealthcare-monolith-ns
   labels:
     app: wealthcare-app
     subname: monolith
@@ -61,7 +61,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: wealthcare-monolith-app
-  namespace: wealthcare-ns
+  namespace: wealthcare-monolith-ns
   labels:
     app: wealthcare-app
     subname: monolith
