@@ -1,6 +1,3 @@
---  This sql is executed automatically when H2 db is enabled in application.properties. This will not be executed for DB2/mysql.
---  This sql file should be available in both wealthusers and wealthfinancialplan services where application.properties exists
-
 --    START WITH 10001;
     insert into WCUSERS (UserName, Password, EmailId, Role) values ('harry','harry','harry@wcare.com', 'BM');
     insert into WCUSERS (UserName, Password, EmailId, Role) values ('charlie','charlie','charlie@wcare.com', 'BM');
