@@ -16,7 +16,7 @@ cd ../
 # Example : docker.io/gandhicloudlab/welathcare-web-ocp-oss:0.0.1
 export IMAGE_SUFFIX=ocp-oss:0.0.1
 export REGISTRY_USER=$(oc whoami)
-export NAMESPACE=wealthcare-ns
+export NAMESPACE=wealthcare-monolith-ns
 export OPENSHIFT_REGISTRY_NAME=$(oc get route -n openshift-image-registry image-registry | awk '{print $2}' | awk 'NR==2')
 
 # Logging to openshift image registry
