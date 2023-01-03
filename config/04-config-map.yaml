@@ -32,8 +32,8 @@ data:
   
   ##### DB-MySQL
   databaseUrl: jdbc:mysql://mysql:3306/BLUDB
-  databaseUsername: root
-  databasePassword: root
+  databaseUsername: admin
+  databasePassword: admin
   databaseDriverClass: com.mysql.jdbc.Driver
   databasePlatform: org.hibernate.dialect.MySQL5Dialect
   
