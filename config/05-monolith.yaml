@@ -37,7 +37,7 @@ spec:
               cpu: "500m"                  
           envFrom:
             - configMapRef:
-                name: wealthcare-config-map
+                name: wealthcare-monolith-config-map
 ---
 apiVersion: v1
 kind: Service
