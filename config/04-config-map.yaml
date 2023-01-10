@@ -6,7 +6,7 @@ metadata:
   labels:
     app: wealthcare-monolith-app
     subname: configmap
-type: Opaque
+#type: Opaque
 data:
   ##### User and FinancialPlan services
   #apiUrlUser: http://wealthcare-user-wealthcare-monolith-ns.gsidevint-4c84f1rs.appdomain.cloud/
