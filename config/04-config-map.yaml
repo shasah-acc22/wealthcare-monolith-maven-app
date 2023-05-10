@@ -11,8 +11,8 @@ data:
   ##### User and FinancialPlan services
   #apiUrlUser: http://wealthcare-user-wealthcare-monolith-ns.gsidevint-4c84f1rs.appdomain.cloud/
   #apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-monolith-ns.gsidevint-4c84f1rs.appdomain.cloud/
-  apiUrlFinancialplan: http://wealthcare-user-wealthcare-monolith-ns.apps.cluster-z52q7.z52q7.sandbox76.opentlc.com/financialplan/
-  apiUrlUser: http://wealthcare-user-wealthcare-monolith-ns.apps.cluster-z52q7.z52q7.sandbox76.opentlc.com/user/
+  apiUrlFinancialplan: http://wealthcare-user-wealthcare-monolith-ns.apps.cluster-7mbt7.7mbt7.sandbox2136.opentlc.com/financialplan/
+  apiUrlUser: http://wealthcare-user-wealthcare-monolith-ns.apps.cluster-7mbt7.7mbt7.sandbox2136.opentlc.com/user/
   
   ##### MQ
   configMapMqConnName: 111.222.333.444(1414)
