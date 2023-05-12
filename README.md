@@ -83,7 +83,8 @@ oc create -f 02-namespace.yaml
 oc project wealthcare-monolith-ns
 ```
 
-- 6) Build the docker hub file.
+- 6) Build the docker hub file. 
+     - When you run the script, you have to choose docker.io/anapsix/alpine-java:8 option to pull the images. 
 ```
 cd wealthcare-monolith-maven-app/config/
 ./03-build-dockerhub.sh
