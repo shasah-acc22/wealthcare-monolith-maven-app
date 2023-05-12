@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: container-monolith
-          image: "default-route-openshift-image-registry.apps.cluster-7mbt7.7mbt7.sandbox2136.opentlc.com/wealthcare-monolith-ns/wealthcare-monolith-ocp-oss:0.0.1"
+          image: "default-route-openshift-image-registry.apps.cluster-lsttp.lsttp.example.opentlc.com/wealthcare-monolith-ns/wealthcare-monolith-ocp-oss:0.0.1"
           imagePullPolicy: Always
           ports:
             - name: 9080-tcp
