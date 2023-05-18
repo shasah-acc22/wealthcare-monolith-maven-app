@@ -6,13 +6,13 @@ metadata:
   labels:
     app: wealthcare-monolith-app
     subname: configmap
-type: Opaque
+#type: Opaque
 data:
   ##### User and FinancialPlan services
   #apiUrlUser: http://wealthcare-user-wealthcare-monolith-ns.gsidevint-4c84f1rs.appdomain.cloud/
   #apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-monolith-ns.gsidevint-4c84f1rs.appdomain.cloud/
-  apiUrlFinancialplan: http://wealthcare-user-wealthcare-monolith-ns.apps.cluster-rf9fc.rf9fc.sandbox2675.opentlc.com/financialplan/
-  apiUrlUser: http://wealthcare-user-wealthcare-monolith-ns.apps.cluster-rf9fc.rf9fc.sandbox2675.opentlc.com/user/
+  apiUrlFinancialplan: http://wealthcare-user-wealthcare-monolith-ns.apps.cluster-ts4j6.ts4j6.sandbox542.opentlc.com/financialplan/
+  apiUrlUser: http://wealthcare-user-wealthcare-monolith-ns.apps.cluster-ts4j6.ts4j6.sandbox542.opentlc.com/user/
   
   ##### MQ
   configMapMqConnName: 111.222.333.444(1414)
@@ -54,3 +54,4 @@ data:
   ##### Watson FinancialPlan
   watsonOptionEnabled: "false"
   watsonUrlFinancialPlan: https://test@test11.com
+ 
