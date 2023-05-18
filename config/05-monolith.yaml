@@ -30,7 +30,7 @@ spec:
               containerPort: 9443
           resources:
             requests:
-              memory: "200Mi"
+              memory: "80Mi"
               cpu: "50m"
             limits:
               memory: "75Mi"
