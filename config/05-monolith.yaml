@@ -11,7 +11,7 @@ spec:
     matchLabels:
       app: wealthcare-app
       subname: monolith
-  replicas: 1
+  replicas: 5
   template:
     metadata:
       labels:
