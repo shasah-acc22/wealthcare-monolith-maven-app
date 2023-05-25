@@ -30,11 +30,11 @@ spec:
               containerPort: 9443
           resources:
             requests:
-              memory: "80Mi"
-              cpu: "50m"
+              memory: "25Mi"
+              cpu: "25m"
             limits:
-              memory: "100Mi"
-              cpu: "75m"                  
+              memory: "50Mi"
+              cpu: "50m"                  
           envFrom:
             - configMapRef:
                 name: wealthcare-monolith-config-map
